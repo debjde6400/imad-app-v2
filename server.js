@@ -111,7 +111,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-app.get('/ui/madi.png', function (req, res) {
+app.get('/ui/09376_HD.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', '09376_HD.jpg'));
 });
 
