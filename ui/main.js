@@ -1,4 +1,4 @@
-console.log('Loaded!');
+/*console.log('Loaded!');
 
 //change the main text
 var element = document.getElementById('main-text');
@@ -16,15 +16,15 @@ function moveRight()
 
 img.onclick = function (){
     var interval = setInterval(moveRight,50);
-};
+};*/
 
 var button = document.getElementById('counter');
 
 button.onclick = function(){
     //create a request object, capture the response and store in a variable, render the variable in correct span
-    var request = new XMLHTTPRequest();
+    var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
-        if(request.readyState === XMLHTTPRequest.DONE){
+        if(request.readyState === XMLHttpRequest.DONE){
             //take some action
             if(request.status === 200){
                 var counter = request.responseText;
