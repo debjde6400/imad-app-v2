@@ -124,7 +124,7 @@ app.get('/ui/09376_HD.jpg', function (req, res) {
 var names=[];
 app.get('/submit-name/:name',function(req,res){
     var name= req.params.name;
-    name.push(name);
+    names.push(name);
     //json convet js objs to st
     res.send(JSON.stringify(names));
 });
