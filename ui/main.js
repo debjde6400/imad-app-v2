@@ -19,12 +19,22 @@ img.onclick = function (){
 };
 
 var button = document.getElementById('counter');
-var counter = 0;
+
 button.onclick = function(){
-    //make a request to the counter endpoint, capture the response and store in a variable, render the variable in correct span
-    
-    counter = counter + 1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
-    
+    //create a request object, capture the response and store in a variable, render the variable in correct span
+    var request = new XMLHTTPRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState === XMLHTTPRequest.DONE){
+            //take some action
+            if(request.status === 200){
+                var counter = request.responseText;
+                var span = document.getElementById('count');
+                span.innerHTML = counter.toString();
+            }
+        }
+        //not done yet
+    };
+    //make the request
+    request.open('GET','http://http://debjde6400.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
