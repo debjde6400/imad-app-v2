@@ -35,6 +35,6 @@ button.onclick = function(){
         //not done yet
     };
     //make the request
-    request.open('GET','http://http://debjde6400.imad.hasura-app.io/counter',true);
+    request.open('GET','http://debjde6400.imad.hasura-app.io/counter',true);
     request.send(null);
 };
