@@ -13,58 +13,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-var articles = {
-    'article-one' :{
-    title : 'Article One | Practicing gurr',
-    heading : 'Article One for demoing',
-    date : '23rd January, 2015',
-    content : `<p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>`
-},
-    'article-two' :{
-    title : 'Article Two | Practicing gurr',
-    heading : 'Article Two for demoing',
-    date : '23rd January, 2015',
-    content : `<p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>`
-},
-    'article-three' :{
-    title : 'Article Three | Practicing gurr',
-    heading : 'Article Three for demoing',
-    date : '23rd January, 2015',
-    content : `<p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>`
-},
-    'article-four' :{
-    title : 'Article Four | Practicing gurr',
-    heading : 'Article Four for demoing',
-    date : '23rd January, 2015',
-    content : `<p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>
-            <p>
-                It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.It was the day before the Saraswati Puja for the year. It's also the birthday of Netaji Subhash Chandra Bose, a freedom fighter.
-            </p>`
-},
-};
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
