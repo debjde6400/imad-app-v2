@@ -134,11 +134,11 @@ app.get('/submit-name',function(req,res){ // /submit-name?name=xxxx
 });
 
 
-app.get('/:articleName', function (req,res) {
+app.get('/articles/:articleName', function (req,res) {
     //articleName == article-one
     //articles[articleName] == {} content object for article one
     articleName= req.params.articleName;
-    pool.query("SELECT * FROM article WHERE title='"+req.params.articleName+"'",function(err,result){
+    pool.query("SELECT * FROM article WHERE title="+req.params.articleName,function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
