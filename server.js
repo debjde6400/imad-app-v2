@@ -63,7 +63,7 @@ function hash(input,salt){
 
 app.post('/create-user',function(req,res){
    //username,password
-   //{"username":"abc","password":"1234"}
+   //{"username" : "abc","password" : "1234"}
    //JSON
    var username = req.body.username;
    var password = req.body.password;
